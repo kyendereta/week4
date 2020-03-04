@@ -1,0 +1,8 @@
+<body>
+    <h6>SIGNUP</h6>
+    <%if @age >= 18%>
+        <p>you are old enough to join us</p>
+    <%else%>
+        <p>Wait for at least <%=18 - @age%> more years, we'll be waiting too.</p>
+    <%end%>
+</body>
