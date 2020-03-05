@@ -41,10 +41,28 @@ end
     erb:sum
   end
 
-  get "/calculation_result" do
+  post "/sum" do
     @num1 = params[:num1]
     @num2 = params[:num2]
+    @sum= @num1.to_f + @num2.to_f
+
+    File.open("results.txt", "a+") do |file|
+        file.puts(@sum)
+    end
+
       erb :results
+  end
+
+  
+
+  get '/all_results' do
+      def all_results
+        return [] unless File.exist?("results.txt")
+        File.read("results.txt").split("/n")
+      end
+
+      @all_results = all_results
+      erb :all_results
   end
 
   get '/signup/:age' do
