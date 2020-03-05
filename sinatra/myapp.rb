@@ -38,10 +38,13 @@ end
 #   end
 
   get '/sum' do
-    @num1 =params[:num1]
-    @num2 =params[:num2]
-
     erb:sum
+  end
+
+  get "/calculation_result" do
+    @num1 = params[:num1]
+    @num2 = params[:num2]
+      erb :results
   end
 
   get '/signup/:age' do

@@ -1,15 +1,8 @@
 <h3>Enter Your Values</h3>
-<form>
+<form action = "/calculation_result">
      <input name="num1" type="text" placeholder="First Number" ><br>
      <input name="num2" type="text" placeholder="Second Number"><br>
      <input type="submit" value="calculate">     
 
 </form>
  
- <% if @num1 != nil && @num2 != nil %>
-         <%if @num1.strip == "" or @num2.strip==""%>
-             <p> Kindly fill the form to calculate </p>
-        <%else%>
-            <p>The sum of <%=@num1%> and <%=@num2%> is <%= @num1.to_f + @num2.to_f%></p>
-         <%end%>
- <%end%>
