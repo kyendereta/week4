@@ -1,0 +1,15 @@
+<body>
+<h1>Peoples Details</h1>
+  <table>
+  <%@details.each do |key, value|%>
+   <tr>
+    <th><%=key%></th>
+   </tr>
+   <tr>
+   <%value.each do |element|%>
+    <td><%=element%></td>
+    <%end%>
+   </tr>
+   <%end%>
+  </table>
+</body>
