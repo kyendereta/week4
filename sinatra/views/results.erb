@@ -1,0 +1,7 @@
+<h3>Your Answer</h3>
+
+         <%if @num1.strip == "" or @num2.strip==""%>
+             <p> Kindly fill the form to calculate </p>
+        <%else%>
+            <p>The sum of <%=@num1%> and <%=@num2%> is <%= @num1.to_f + @num2.to_f%></p>
+         <%end%>
