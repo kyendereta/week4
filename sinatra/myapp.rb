@@ -37,9 +37,12 @@ end
 #     erb age_sum
 #   end
 
-#   get '/:a/:b' do
-#     "The sum of numbers #{params[:a].to_i} and #{params[:b].to_i} is #{(params[:a] + params[:b]).to_i}"
-#   end
+  get '/sum' do
+    @num1 =params[:num1]
+    @num2 =params[:num2]
+
+    erb:sum
+  end
 
   get '/signup/:age' do
       age = params["age"]
